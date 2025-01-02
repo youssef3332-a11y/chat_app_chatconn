@@ -1,0 +1,4 @@
+front:
+npm create vite@latest .
+
+npm install express dotenv cookie-parser bcryptjs mongoose socket.io jsonwebtoken nodemon
