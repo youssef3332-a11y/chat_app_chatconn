@@ -29,6 +29,9 @@ const Navbar = () => {
           <a href='#about' className='hover:text-darkGrayishBlue'>
             About Us
           </a> {/* New link added */}
+          <a href='#services' className='hover:text-darkGrayishBlue'>
+            Services
+          </a> {/* Another new link added */}
         </div>
 
         {/* Hamburger Icon */}
@@ -59,6 +62,7 @@ const Navbar = () => {
           <a href='#features'>Features</a>
           <a href='#cta'>Contact Us</a>
           <a href='#about'>About Us</a> {/* New link added */}
+          <a href='#services'>Services</a> {/* Another new link added */}
         </div>
       </div>
     </nav>
