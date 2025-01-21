@@ -1,23 +1,17 @@
 import { Link } from 'react-router-dom';
-
 import companyLogo from '../../assets/images/logo.png';
-import facebookLogo from '../../assets/images/icon-facebook.svg';
-import instagramLogo from '../../assets/images/icon-instagram.svg';
+import facebookLogo from '../../assets/images/facebook.png';
+import instagramLogo from '../../assets/images/instagram.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className='bg-veryDarkBlue'>
-      {/* Flex Container */}
-      <div className='container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0'>
-        
-        <div className='flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start'>
-          <div className='mx-auto my-6 text-center text-white md:hidden'>
-            Copyright © {currentYear}, All Rights Reserved
-          </div>
-          
-          <div className='flex items-center space-x-2 pt-2'>
+    <footer className='bg-orange-500 py-8'>
+      <div className='container mx-auto px-6'>
+        <div className='flex justify-between items-center'>
+          {/* Logo and Title */}
+          <div className='flex items-center space-x-2'>
             <img src={companyLogo} alt='Company Logo' className='h-8' /> {/* Adjust the height to make the logo smaller */}
             <span className='text-white text-2xl font-bold'>ChatConn</span> {/* Add "Conn" to "Chat" */}
           </div>
@@ -44,6 +38,9 @@ const Footer = () => {
             <a href='#cta' className='hover:text-brightRed'>
               Contact Us
             </a>
+            <a href='#about' className='hover:text-brightRed'>
+              About Us
+            </a> {/* New link added */}
           </div>
         </div>
 
@@ -54,7 +51,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 
