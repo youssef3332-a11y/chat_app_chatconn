@@ -5,6 +5,7 @@ const CallToAction = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [phone, setPhone] = useState(''); // New state for phone number
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,8 +14,9 @@ const CallToAction = () => {
       name,
       email,
       message,
+      phone, // Include phone number in template parameters
     };
-{/*final correction*/}
+
     emailjs.send(
       process.env.REACT_APP_EMAILJS_SERVICE_ID,
       process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
@@ -31,47 +33,46 @@ const CallToAction = () => {
     setName('');
     setEmail('');
     setMessage('');
+    setPhone(''); // Reset phone number field
   };
 
   return (
-    <section id='cta' className='bg-brightRed'>
-      
-      <div className='container flex flex-col items-center justify-between px-6 py-24 mx-auto space-y-12 md:py-12 md:flex-row md:space-y-0'>
-        
-        <h2 className='text-5xl font-bold leading-tight text-center text-white md:text-4xl md:max-w-xl md:text-left'>
-          Contact Us
-        </h2>
-       
-        <form onSubmit={handleSubmit} className='flex flex-col space-y-4'>
-          <input
-            type='text'
-            placeholder='Your Name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className='px-4 py-2 rounded-full focus:outline-none'
-            required
-          />
-          <input
-            type='email'
-            placeholder='Your Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className='px-4 py-2 rounded-full focus:outline-none'
-            required
-          />
-          <textarea
-            placeholder='Your Message'
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className='px-4 py-2 rounded-full focus:outline-none'
-            required
-          />
-          <button
-            type='submit'
-            className='px-6 py-2 text-white bg-green-500 rounded-full hover:bg-green-600 focus:outline-none'
-          >
-            Send Message
-          </button>
+    <section id='cta' className='bg-orange-500 py-8'>
+      <div className='container mx-auto px-6'>
+        <h2 className='text-3xl font-bold text-white text-center'>Contact Us</h2>
+        <form onSubmit={handleSubmit} className='mt-6'>
+          <div className='flex flex-col space-y-4'>
+            <input
+              type='text'
+              placeholder='Your Name'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className='p-2 rounded'
+            />
+            <input
+              type='email'
+              placeholder='Your Email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className='p-2 rounded'
+            />
+            <input
+              type='text'
+              placeholder='Your Phone Number' // New input field for phone number
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className='p-2 rounded'
+            />
+            <textarea
+              placeholder='Your Message'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className='p-2 rounded'
+            />
+            <button type='submit' className='bg-white text-orange-500 font-bold py-2 px-4 rounded'>
+              Send Message
+            </button>
+          </div>
         </form>
       </div>
     </section>
