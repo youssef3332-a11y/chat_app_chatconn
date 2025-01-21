@@ -8,9 +8,9 @@ import mongodblogo from '../../assets/images/mongodblogo.png';
 const Testimonial = () => {
   return (
     <section id='features'>
-      {/* Container to heading and testm blocks */}
+      
       <div className='max-w-6xl px-5 mx-auto mt-32 text-center'>
-        {/* Heading */}
+        
         <h2 className='text-4xl font-bold text-center'>
           Features
         </h2>
