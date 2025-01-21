@@ -29,13 +29,18 @@ const Hero = () => {
             With ChatConn
           </h1>
           <div className='flex justify-start'>
-          <a
-  href="http://localhost:3000"
-  className="p-3 px-6 pt-2 text-white bg-green-500 rounded-full baseline hover:bg-green-600"
->
-  Get Started
-</a>
-
+            <a
+              href="http://localhost:3000"
+              className='px-6 py-3 text-white bg-blue-500 rounded-full hover:bg-blue-700'
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className='px-6 py-3 ml-4 text-white bg-green-500 rounded-full hover:bg-green-700'
+            >
+              Learn More
+            </a> {/* New button added */}
           </div>
         </div>
         {/* Right Item */}
