@@ -55,6 +55,7 @@ const Navbar = () => {
           <a href='#hero'>Home</a>
           <a href='#features'>Features</a>
           <a href='#cta'>Contact Us</a>
+          <a href='#about'>About Us</a> {/* New link added */}
         </div>
       </div>
     </nav>
