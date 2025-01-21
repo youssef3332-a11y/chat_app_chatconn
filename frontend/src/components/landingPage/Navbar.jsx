@@ -26,6 +26,9 @@ const Navbar = () => {
           <a href='#cta' className='hover:text-darkGrayishBlue'>
             Contact Us
           </a>
+          <a href='#about' className='hover:text-darkGrayishBlue'>
+            About Us
+          </a> {/* New link added */}
         </div>
 
         {/* Hamburger Icon */}
