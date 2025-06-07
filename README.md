@@ -27,5 +27,5 @@ you can watch the demo on my youtube video:
 
 ## Contact
 
-For any inquiries, please contact [aitgouraine.youssef1@gmail.com].
+For any inquiries, please contact [aitgouraine.youssef03@gmail.com].
 
